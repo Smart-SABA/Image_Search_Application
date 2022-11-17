@@ -4,7 +4,7 @@ const lang = document.getElementById("language");
 count = 0;
 
 function myWholeProgram() {
-  if (lang.value) {
+  if (lang.value == "english") {
     search.addEventListener("keyup", (e) => {
       if (e.key == "Enter") {
         let searchValue = search.value,

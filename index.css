@@ -66,8 +66,45 @@
   display: none;
 }
 
-.images .image-box img {
+.image-box img {
   margin-bottom: 30px;
-  height: 450px;
+  height: 500px;
   width: 300px;
+}
+
+.image-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-box .text {
+  position: absolute;
+  inset: 0;
+  font-size: 25px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-box .text .decor {
+  background-color: rgb(108, 108, 108);
+  color: white;
+}
+.image-box img,
+.image-box .text {
+  transition: 300ms ease-in-out;
+}
+
+.image-box:hover img.blur {
+  filter: brightness(40%);
+}
+
+.image-box .text {
+  opacity: 0;
+}
+
+.image-box:hover .text {
+  opacity: 1;
 }
